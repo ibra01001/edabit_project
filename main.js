@@ -177,7 +177,7 @@ perimeter("c", 4) ➞ 25.12
 perimeter("c", 9) ➞ 56.52
 */
 // Solution 6
-// level hard
+// level medium
 // points earned 15
 function perimeter(l, num) {
     return (l === "s") * 4 * num + (l === "c") * 6.28 * num;
@@ -213,7 +213,7 @@ Generation	Male	Female
 */
 // Solution 7
 //points earned 15
-// level hard
+// level medium
 
 function generation(x, y) {
     switch (x) {
@@ -253,8 +253,37 @@ Notes
 
 There is a formula for the nth tetrahedral number.*/
 // Solution 8
-// level hard
+// level medium
 // points earned 15
 function tetra(n) {
     return (n * (n + 1) * (n + 2)) / 6;
 }
+// exo 9
+/*
+Create a function that takes an array of numbers and return "Boom!" if the digit 7 appears in the array. Otherwise, return "there is no 7 in the array".
+Examples
+
+sevenBoom([1, 2, 3, 4, 5, 6, 7]) ➞ "Boom!"
+// 7 contains the number seven.
+
+sevenBoom([8, 6, 33, 100]) ➞ "there is no 7 in the array"
+// None of the items contain 7 within them.
+
+sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
+// 97 contains the number seven.
+
+Notes
+
+N/A*/
+// Solution 9
+// level hard
+// points earned 40
+function sevenBoom(arr) {
+  for (const element of arr) {
+    if (String(element).includes("7")) {
+      return "Boom!";
+    }
+  }
+  return "there is no 7 in the array";
+}
+
